@@ -16,6 +16,7 @@ The automation suite validates the following workflow:
    
 
 Tools Used
+
 Cypress
 JavaScript
 Page Object Model (POM)
