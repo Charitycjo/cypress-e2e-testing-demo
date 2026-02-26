@@ -1,77 +1,105 @@
-Project Title
-SauceDemo QA Automation Project – Cypress
+Project Title: SauceDemo QA Automation Project-Cypress
 
-Project Overview
-This project demonstrates automated testing of the SauceDemo e-commerce application using Cypress. The goal of the project is to validate a complete checkout workflow while applying QA best practices such as Page Object Model design, reusable test commands, and structured test validation.
+Project Overview:
+This project demonstrates automated testing of the SauceDemo e-commerce application using Cypress. 
+The goal of the project is to validate a complete checkout workflow while applying QA best practice, such as
+Page Object Model design, reusable test commands, and struture test validation.
 
 
-Testing Scope
-The automation suite validates the following workflow:
-1.	User login
-2.	Product selection
-3.	Add item to cart
-4.	Cart validation
-5.	Checkout process
-6.	Order confirmation
-   
+Testing Scope:
+This automation suite validates the following workflow:
+1. User Login
+2. Product Selection
+3. Add item to cart
+4. Cart validation
+5. Checkout process
+6. Order confirmation
+
+
 
 Tools Used:
--Cypress
--JavaScript
--Page Object Model (POM)
--GitHub
--Node.js
+1. Cypress
+2. JavaScript
+3. Pade Object Model (POM)
+4. GitHub
+5. Node.js
 
 
 
 Framework Design:
-
 The automation framework uses a Page Object Model structure to improve maintainability and readability.
 
-Structure:
+File Struture: 
+1. cypress
+2. support
+3. pages
+4. LoginPage.js
+5. ProductPage.js
+6. CartPage.js
+7. CheckoutPage.js
 
--cypress
--support
--pages
--LoginPage.js
--ProductsPage.js
--CartPage.js
--CheckoutPage.js
-
-tests
+Test:
 checkout.spec.js
 
-Example Test Scenario:
+ Test Scenario:
 
-Test Case: Successful Checkout
+Test Case- Successful Checkout
 
 Steps:
-
-Login with valid credentials
-
-Add Sauce Labs Backpack to cart
-
-Verify cart badge count updates
-
-Open cart
-
-Confirm correct item appears
-
-Complete checkout information
-
-Finish order
+1. Login with valid credentials
+2. Add Sauce Labs Backpack to cart
+3. Verify cart badge count updates
+4. Open cart
+5. Confirm correct item appears
+6. Complete checkout information
+7. Finish order
 
 Expected Result:
 Order confirmation message appears.
 
+Automation Test:
+import LoginPage from '../support/pages/LoginPage';
+import ProductsPage from '../support/pages/ProductsPage';
+import CartPage from '../support/pages/CartPage';
+import CheckoutPage from '../support/pages/CheckoutPage';
+
+describe('SauceDemo End-to-End Checkout Flow with POM + Custom Commands', () => {
+  beforeEach(() => {
+    cy.login(Cypress.env('username'), Cypress.env('password'));
+  });
+
+  it('Completes checkout for one item', () => {
+    ProductsPage.addBackpackToCart();
+    ProductsPage.assertCartBadgeCount(1);
+    ProductsPage.openCart();
+
+    CartPage.assertOnCartPage();
+    CartPage.assertItemInCart('Sauce Labs Backpack');
+    CartPage.clickCheckout();
+
+    CheckoutPage.assertOnCheckoutStepOne();
+    CheckoutPage.fillCustomerInfo('John', 'Doe', '12345');
+    CheckoutPage.clickContinue();
+    CheckoutPage.clickFinish();
+
+    CheckoutPage.assertOrderComplete();
+  });
+});
 
 
-How to Run the Tests:
 
-Install dependencies
+How to Run:
 
-npm install
+1. Install dependencies
+2. npm install
+3. Run Cypress
+4. npx cypress open
 
-Run Cypress
 
-npx cypress open
+
+
+
+
+
+
+
