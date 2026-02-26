@@ -24,26 +24,26 @@ Tools Used:
 
 
 
-Framework Design
+Framework Design:
 
 The automation framework uses a Page Object Model structure to improve maintainability and readability.
 
 Structure:
 
-cypress
-support
-pages
-LoginPage.js
-ProductsPage.js
-CartPage.js
-CheckoutPage.js
+-cypress
+-support
+-pages
+-LoginPage.js
+-ProductsPage.js
+-CartPage.js
+-CheckoutPage.js
 
 tests
 checkout.spec.js
 
 
 
-How to Run the Tests
+How to Run the Tests:
 
 Install dependencies
 
