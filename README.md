@@ -59,6 +59,8 @@ Order confirmation message appears.
 
 Automation Test:
 
+***Please refer to Cypress folder***
+
 
 
 
