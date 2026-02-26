@@ -1,76 +1,77 @@
- SauceDemo Automation Framework (Cypress + POM)
- 
+Project Title
 
-🔹 Overview:
- 
- This project automates the end-to-end checkout workflow on the SauceDemo web application using Cypress and the Page Object Model (POM) design pattern.
- It demonstrates how modular automation architecture can be applied to real-world e-commerce testing — covering login, product selection, cart management, and checkout completion.
+SauceDemo QA Automation Project – Cypress
 
+Project Overview
 
+This project demonstrates automated testing of the SauceDemo e-commerce application using Cypress. The goal of the project is to validate a complete checkout workflow while applying QA best practices such as Page Object Model design, reusable test commands, and structured test validation.
 
-🔹Tech Stack:
+Testing Scope
 
-Framework: Cypress 13+
+The automation suite validates the following workflow:
 
-Language: JavaScript (ES6)
+User login
 
-Design Pattern: Page Object Model (POM)
+Product selection
 
-Configuration: Environment variables for credentials
+Add item to cart
 
-Additional Features: Custom Cypress Commands for login reusability
+Cart validation
 
+Checkout process
 
+Order confirmation
 
+This ensures the core purchasing functionality works as expected.
 
+Tools Used
 
-🔹Project Setup Note: 
+Cypress
+JavaScript
+Page Object Model (POM)
+GitHub
+Node.js
 
-In a standard Cypress POM structure, each workflow (Login, Product, Cart, Checkout) would have its own dedicated test file under /e2e/, importing POM files from /support/pages/.
-During implementation, I encountered a Cypress path resolution issue where the test runner was unable to correctly locate imported POM files from nested directories.
-After exploring multiple configuration options, I opted to consolidate the entire end-to-end flow into a single script — workflow.cy.js — placed directly inside the /e2e/ folder.
-This adjustment allowed me to maintain the use of modular POM files, demonstrate a complete working automation flow and showcase my ability to troubleshoot and adapt under technical constraints. Once the path configuration is resolved, this workflow can easily be split into multiple smaller suites (e.g., loginTests.cy.js, cartTests.cy.js, etc.) for scalable regression execution.
+Optional if true:
 
-🔹 Running the Tests:
+Jira
+Zephyr
+Postman
+SQL
 
-1. Clone the Repository:
-   
-   git clone https://github.com/<your-username>/saucedemo-automation
-   .gitcd saucedemo-automation
-   
+Framework Design
 
-2.  Install Dependencies:
-   npm install
+The automation framework uses a Page Object Model structure to improve maintainability and readability.
 
-3.  Set Environment Variables
+Example structure:
 
-   {
-  "username": "standard_user",
-  "password": "secret_sauce"
-}
+cypress
+support
+pages
+LoginPage.js
+ProductsPage.js
+CartPage.js
+CheckoutPage.js
 
+tests
+checkout.spec.js
 
-
-4. Run Tests:
-
-   npx cypress open
-   
-   npx cypress run
-
-🔹Highlights & Learnings:
-
-Implemented POM architecture for reusable and maintainable test components
-
-Utilized custom commands to simplify repetitive actions (e.g., login)
-
-Integrated fixtures and environment variables for flexible configuration
-
-Debugged and adapted to Cypress path resolution limitations pragmatically
-
-Showcased problem-solving mindset and structured approach to automation design  
+Each page file contains reusable methods that represent user interactions on that page.
 
 
-   
+How to Run the Tests
+
+Install dependencies
+
+npm install
+
+Run Cypress
+
+npx cypress open
+
+or
+
+npx cypress run
 
 
 
