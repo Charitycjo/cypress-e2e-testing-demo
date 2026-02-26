@@ -16,12 +16,11 @@ The automation suite validates the following workflow:
    
 
 Tools Used:
-
-Cypress
-JavaScript
-Page Object Model (POM)
-GitHub
-Node.js
+-Cypress
+-JavaScript
+-Page Object Model (POM)
+-GitHub
+-Node.js
 
 
 
