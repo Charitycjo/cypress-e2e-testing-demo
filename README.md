@@ -58,6 +58,7 @@ Expected Result:
 Order confirmation message appears.
 
 Automation Test:
+
 import LoginPage from '../support/pages/LoginPage';
 import ProductsPage from '../support/pages/ProductsPage';
 import CartPage from '../support/pages/CartPage';
