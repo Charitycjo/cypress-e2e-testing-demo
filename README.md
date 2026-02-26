@@ -15,7 +15,7 @@ The automation suite validates the following workflow:
 6.	Order confirmation
    
 
-Tools Used
+Tools Used:
 
 Cypress
 JavaScript
