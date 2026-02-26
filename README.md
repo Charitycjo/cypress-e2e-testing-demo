@@ -1,82 +1,58 @@
-Project Title: SauceDemo QA Automation Project-Cypress
 
-Project Overview:
-This project demonstrates automated testing of the SauceDemo e-commerce application using Cypress. 
-The goal of the project is to validate a complete checkout workflow while applying QA best practice, such as
-Page Object Model design, reusable test commands, and struture test validation.
+---
 
+## Sample Test Scenario
 
-Testing Scope:
-This automation suite validates the following workflow:
-1. User Login
-2. Product Selection
-3. Add item to cart
-4. Cart validation
-5. Checkout process
-6. Order confirmation
+### Test Case: Successful Checkout
 
+**Steps:**
 
+1. Log in with valid credentials  
+2. Add "Sauce Labs Backpack" to cart  
+3. Verify cart badge count updates  
+4. Open cart  
+5. Confirm correct item appears  
+6. Complete checkout information  
+7. Click Finish  
 
-Tools Used:
-1. Cypress
-2. JavaScript
-3. Pade Object Model (POM)
-4. GitHub
-5. Node.js
+**Expected Result:**
 
+- Order confirmation message appears
+- Checkout process completes successfully
 
+---
 
-Framework Design:
-The automation framework uses a Page Object Model structure to improve maintainability and readability.
+## Automation Implementation
 
-File Struture: 
-1. cypress
-2. support
-3. pages
-4. LoginPage.js
-5. ProductPage.js
-6. CartPage.js
-7. CheckoutPage.js
+The test is implemented using Cypress with:
 
-Test:
-checkout.spec.js
+- Custom commands for login
+- Page Object Model methods for interaction
+- Assertions for validation
+- Environment variables for credentials
 
- Test Scenario:
+Please refer to the Cypress test files inside the `cypress` folder for full implementation details.
 
-Test Case- Successful Checkout
+---
 
-Steps:
-1. Login with valid credentials
-2. Add Sauce Labs Backpack to cart
-3. Verify cart badge count updates
-4. Open cart
-5. Confirm correct item appears
-6. Complete checkout information
-7. Finish order
+## How to Run the Project
 
-Expected Result:
-Order confirmation message appears.
-
-Automation Test:
-
-***Please refer to Cypress folder***
+1. Clone the repository  
+2. Install dependencies  
+3. Run Cypress in interactive mode
 
 
+---
 
+## Future Enhancements
 
+- Add negative test scenarios
+- Add API testing integration
+- Implement CI/CD pipeline integration
+- Generate test reporting
 
-How to Run:
+---
 
-1. Install dependencies
-2. npm install
-3. Run Cypress
-4. npx cypress open
+## Objective
 
-
-
-
-
-
-
-
-
+This project demonstrates practical automation skills including test structure design, reusable code patterns, and workflow validation using Cypress.
