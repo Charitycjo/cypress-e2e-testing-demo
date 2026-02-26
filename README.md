@@ -1,3 +1,64 @@
+# SauceDemo QA Automation Project – Cypress
+
+## Project Overview
+
+This project demonstrates automated end-to-end testing of the SauceDemo e-commerce application using Cypress.
+
+The objective of this project is to validate the complete checkout workflow while applying QA best practices such as:
+
+- Page Object Model (POM) design
+- Reusable custom commands
+- Structured test validation
+- Assertion-based verification
+
+This project reflects practical automation testing principles and framework organization.
+
+---
+
+## Testing Scope
+
+The automation suite validates the following user workflow:
+
+1. User login
+2. Product selection
+3. Add item to cart
+4. Cart badge validation
+5. Checkout process
+6. Order confirmation
+
+The test ensures that the core purchasing functionality works as expected.
+
+---
+
+## Tools & Technologies Used
+
+- Cypress
+- JavaScript
+- Page Object Model (POM)
+- Node.js
+- GitHub
+
+---
+
+## Framework Design
+
+The automation framework follows a Page Object Model (POM) structure to improve maintainability, scalability, and readability.
+
+Each page file contains reusable methods that represent user interactions and assertions specific to that page.
+
+---
+
+## Project Structure
+cypress/
+├── e2e/
+│ └── checkout.spec.js
+├── support/
+│ └── commands.js
+└── pages/
+├── LoginPage.js
+├── ProductsPage.js
+├── CartPage.js
+└── CheckoutPage.js
 
 ---
 
@@ -41,7 +102,7 @@ Please refer to the Cypress test files inside the `cypress` folder for full impl
 2. Install dependencies  
 3. Run Cypress in interactive mode
 
-
+ 
 ---
 
 ## Future Enhancements
@@ -56,3 +117,5 @@ Please refer to the Cypress test files inside the `cypress` folder for full impl
 ## Objective
 
 This project demonstrates practical automation skills including test structure design, reusable code patterns, and workflow validation using Cypress.
+
+
