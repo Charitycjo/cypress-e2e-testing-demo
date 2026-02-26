@@ -41,6 +41,29 @@ Structure:
 tests
 checkout.spec.js
 
+Example Test Scenario:
+
+Test Case: Successful Checkout
+
+Steps:
+
+Login with valid credentials
+
+Add Sauce Labs Backpack to cart
+
+Verify cart badge count updates
+
+Open cart
+
+Confirm correct item appears
+
+Complete checkout information
+
+Finish order
+
+Expected Result:
+Order confirmation message appears.
+
 
 
 How to Run the Tests:
