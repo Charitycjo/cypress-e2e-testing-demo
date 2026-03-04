@@ -35,3 +35,39 @@ The automation framework validates:
 ---
 
 ## Project Structure
+
+cypress/
+├── e2e
+├── fixtures
+└── support/
+└── pages/
+
+
+---
+
+## Tools & Technologies
+
+- Cypress  
+- JavaScript  
+- Node.js  
+- GitHub  
+- GitHub Actions (CI)  
+
+---
+
+## Key Automation Concepts Demonstrated
+
+- Separation of test logic and test data using fixtures  
+- Reusable page objects for maintainability  
+- Custom commands for simplified authentication  
+- Structured test organization for scalability  
+- CI integration for automated execution  
+
+---
+
+## Purpose
+
+This project demonstrates foundational automation engineering practices aligned with QA roles that require both structured manual testing knowledge and automated validation capability.
+
+
+
