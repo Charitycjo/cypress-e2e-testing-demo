@@ -4,9 +4,12 @@ import CartPage from '../support/pages/CartPage';
 import CheckoutPage from '../support/pages/CheckoutPage';
 
 describe('SauceDemo End-to-End Checkout Flow with POM + Custom Commands', () => {
-  beforeEach(() => {
-    cy.login(Cypress.env('username'), Cypress.env('password'));
+  beforeEach(function () {
+  cy.fixture('user').then((data) => {
+    this.user = data.standardUser;
+    cy.login(this.user.username, this.user.password);
   });
+});
 
   it('Completes checkout for one item', () => {
     ProductsPage.addBackpackToCart();
@@ -18,7 +21,14 @@ describe('SauceDemo End-to-End Checkout Flow with POM + Custom Commands', () => 
     CartPage.clickCheckout();
 
     CheckoutPage.assertOnCheckoutStepOne();
-    CheckoutPage.fillCustomerInfo('John', 'Doe', '12345');
+    cy.fixture('user').then((data) => {
+  const info = data.checkoutInfo;
+  CheckoutPage.fillCustomerInfo(
+    info.firstName,
+    info.lastName,
+    info.postalCode
+  );
+});
     CheckoutPage.clickContinue();
     CheckoutPage.clickFinish();
 
